@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CribCount: cribbage pegboard for iPhone and iPad</title>
+<meta name="description" content="CribCount is a cribbage board and score keeper for games played with your own cards, with a hand counter and skunk lines.">
+<style>
+:root{color-scheme:light dark;--bg:#f6f7f9;--card:#ffffff;--text:#1a1d21;--muted:#5b6470;--line:#dde1e6;--accent:#a8431f;--warn-bg:#fff6e0;--warn-line:#e0b040}
+@media (prefers-color-scheme:dark){:root{--bg:#111315;--card:#1b1e22;--text:#eceef1;--muted:#a3abb5;--line:#30353b;--accent:#ff9a62;--warn-bg:#2b2412;--warn-line:#8a6a1c}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:720px;margin:0 auto;padding:32px 20px 56px}
+header.site{max-width:720px;margin:0 auto;padding:20px 20px 0;display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline;justify-content:space-between}
+header.site .brand{font-weight:700;font-size:18px;color:var(--text);text-decoration:none}
+nav a{margin-right:16px;font-size:15px}
+nav a:last-child{margin-right:0}
+a{color:var(--accent)}
+h1{font-size:30px;line-height:1.2;margin:24px 0 8px}
+h2{font-size:21px;line-height:1.3;margin:36px 0 8px}
+h3{font-size:17px;margin:24px 0 4px}
+p,ul,ol{margin:0 0 14px}
+ul,ol{padding-left:22px}
+li{margin-bottom:6px}
+.muted{color:var(--muted);font-size:15px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 14px}
+.note{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:12px;padding:14px 18px;margin:20px 0}
+.note p:last-child,.card p:last-child,.card ul:last-child{margin-bottom:0}
+dl{margin:0}
+dt{font-weight:600;margin-top:16px}
+dd{margin:4px 0 0}
+.wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0}
+.btn{display:inline-block;padding:11px 18px;border-radius:10px;border:1px solid var(--line);background:var(--card);text-decoration:none;font-weight:600}
+footer{max-width:720px;margin:0 auto;padding:0 20px 40px;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<header class="site">
+<a class="brand" href="index.html">CribCount</a>
+<nav><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav>
+</header>
+<main>
+<h1>CribCount</h1>
+<p>A cribbage pegboard for iPhone and iPad. Play with your own cards and let the phone keep the score: tap the points, the pegs move, and the board calls the skunk.</p>
+<div class="links">
+<a class="btn" href="support.html">Support and FAQ</a>
+<a class="btn" href="privacy.html">Privacy Policy</a>
+</div>
+<h2>What it does</h2>
+<ul>
+<li>A full 121-point board with a front and a back peg for each player</li>
+<li>One-tap pegging keys for each player, and undo for the last move</li>
+<li>Face-to-face seating: the far player's keys are turned around</li>
+<li>Skunk and double skunk lines marked on the board and called at the end</li>
+<li>With Pro: a hand counter for fifteens, pairs, runs, flushes and nobs</li>
+<li>With Pro: match history with wins, losses and skunks</li>
+<li>With Pro: three players, the 61-point game, and maple and slate boards</li>
+</ul>
+<h2>Free and Pro</h2>
+<div class="card">
+<p><strong>Free:</strong> two-player games to 121 on the walnut board, with undo. No ads, no time limit.</p>
+<p><strong>CribCount Pro:</strong> a one-time purchase, not a subscription. Adds the hand counter, match history and standings, three-player games, the 61-point game and two more boards.</p>
+</div>
+<h2>Built for iPhone Duo and iPad too</h2>
+<p>On a regular iPhone the board sits between the two players' keys. On the unfolded iPhone Duo and on iPad the board and the keys are shown side by side as two panes.</p>
+<h2>Private by design</h2>
+<p>No account, no analytics, no ads, no third-party SDKs. Everything stays on your device. See the <a href="privacy.html">privacy policy</a>.</p>
+<p class="muted">For iPhone and iPad, iOS 17 or later. Made by Alday Inc. CribCount is a score keeper, not a card game, and involves no wagering.</p>
+</main>
+<footer>&copy; 2026 Alday Inc. CribCount keeps score for a game played with your own cards.</footer>
+</body>
+</html>

@@ -1,75 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TowMargin: towing weight calculator for iPhone</title>
-<meta name="description" content="TowMargin checks your truck and trailer weights against their ratings and shows the margin in pounds.">
-<style>
-:root{color-scheme:light dark;--bg:#f6f7f9;--card:#ffffff;--text:#1a1d21;--muted:#5b6470;--line:#dde1e6;--accent:#0b63ce;--warn-bg:#fff6e0;--warn-line:#e0b040}
-@media (prefers-color-scheme:dark){:root{--bg:#111315;--card:#1b1e22;--text:#eceef1;--muted:#a3abb5;--line:#30353b;--accent:#6eb0ff;--warn-bg:#2b2412;--warn-line:#8a6a1c}}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-main{max-width:720px;margin:0 auto;padding:32px 20px 56px}
-header.site{max-width:720px;margin:0 auto;padding:20px 20px 0;display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline;justify-content:space-between}
-header.site .brand{font-weight:700;font-size:18px;color:var(--text);text-decoration:none}
-nav a{margin-right:16px;font-size:15px}
-nav a:last-child{margin-right:0}
-a{color:var(--accent)}
-h1{font-size:30px;line-height:1.2;margin:24px 0 8px}
-h2{font-size:21px;line-height:1.3;margin:36px 0 8px}
-h3{font-size:17px;margin:24px 0 4px}
-p,ul,ol{margin:0 0 14px}
-ul,ol{padding-left:22px}
-li{margin-bottom:6px}
-.muted{color:var(--muted);font-size:15px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 14px}
-.note{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:12px;padding:14px 18px;margin:20px 0}
-.note p:last-child,.card p:last-child,.card ul:last-child{margin-bottom:0}
-dl{margin:0}
-dt{font-weight:600;margin-top:16px}
-dd{margin:4px 0 0}
-.wrap{overflow-x:auto}
-table{border-collapse:collapse;width:100%;font-size:15px}
-th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
-.links{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0}
-.btn{display:inline-block;padding:11px 18px;border-radius:10px;border:1px solid var(--line);background:var(--card);text-decoration:none;font-weight:600}
-footer{max-width:720px;margin:0 auto;padding:0 20px 40px;color:var(--muted);font-size:14px}
-</style>
+<title>TowMargin — RV &amp; Trailer Towing Weight Calculator (Payload, GCWR, Tongue Weight)</title>
+<meta name="description" content="A towing weight calculator for RV, travel trailer, fifth wheel and utility trailer owners. Enter the ratings on your truck and trailer and see every limit side by side with your margin in pounds."><meta name="keywords" content="towing calculator, payload calculator, tongue weight calculator, GCWR calculator, fifth wheel weight, travel trailer towing, RV towing capacity, truck payload">
+<link rel="canonical" href="https://aanoval.github.io/alday-apps/towmargin/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Alday Inc">
+<meta property="og:title" content="TowMargin — RV &amp; Trailer Towing Weight Calculator (Payload, GCWR, Tongue Weight)"><meta property="og:description" content="A towing weight calculator for RV, travel trailer, fifth wheel and utility trailer owners. Enter the ratings on your truck and trailer and see every limit side by side with your margin in pounds."><meta property="og:url" content="https://aanoval.github.io/alday-apps/towmargin/">
+<meta property="og:image" content="https://aanoval.github.io/alday-apps/towmargin/img/art.jpg"><meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0d14">
+<link rel="icon" href="/assets/juragankos-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "TowMargin", "alternateName": "Towing Calculator - TowMargin", "description": "A towing weight calculator for RV, travel trailer, fifth wheel and utility trailer owners. Enter the ratings on your truck and trailer and see every limit side by side with your margin in pounds.", "url": "https://aanoval.github.io/alday-apps/towmargin/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "iOS 17 or later", "inLanguage": ["en", "id", "zh-Hans", "ja", "es", "de", "fr", "pt-BR", "ko", "ru"], "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Organization", "name": "Alday Inc", "url": "https://aanoval.github.io/"}, "publisher": {"@type": "Organization", "name": "Alday Inc", "url": "https://aanoval.github.io/"}, "image": "https://aanoval.github.io/alday-apps/towmargin/img/art.jpg", "screenshot": ["https://aanoval.github.io/alday-apps/towmargin/img/shot1.jpg", "https://aanoval.github.io/alday-apps/towmargin/img/shot2.jpg", "https://aanoval.github.io/alday-apps/towmargin/img/shot3.jpg", "https://aanoval.github.io/alday-apps/towmargin/img/shot4.jpg", "https://aanoval.github.io/alday-apps/towmargin/img/shot5.jpg", "https://aanoval.github.io/alday-apps/towmargin/img/shot6.jpg"], "downloadUrl": "https://apps.apple.com/app/id6833473043", "sameAs": ["https://apps.apple.com/app/id6833473043"]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is TowMargin free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, the full set of checks is free. A one-time Pro purchase adds extras."}}, {"@type": "Question", "name": "Does it use my location or an account?", "acceptedAnswer": {"@type": "Answer", "text": "No. TowMargin has no account and keeps your numbers on your device."}}]}</script>
 </head>
 <body>
-<header class="site">
-<a class="brand" href="index.html">TowMargin</a>
-<nav><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav>
-</header>
-<main>
-<h1>TowMargin</h1>
-<p>A towing weight calculator for iPhone. Enter the ratings for your tow vehicle and trailer, add your passengers and cargo, and see whether each weight is within its rating and how many pounds of margin are left.</p>
-<div class="links">
-<a class="btn" href="support.html">Support and FAQ</a>
-<a class="btn" href="privacy.html">Privacy Policy</a>
+<nav class="top always" id="nav"><div class="wrap">
+  <a href="/" class="logo"><span class="logo-mark">A</span>Alday Inc</a>
+  <ul><li><a href="/#games">Games</a></li><li><a href="/#studio">Studio</a></li><li><a href="/alday-apps/">All games &amp; apps</a></li></ul>
+  <a class="btn btn-store" href="https://apps.apple.com/app/id6833473043" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.65.8-3.34.8-.7 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.74 2.2 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.7.71 2.86.69 1.18-.02 1.93-1.08 2.66-2.14.84-1.22 1.18-2.41 1.2-2.47-.03-.01-2.3-.88-2.3-3.55zM14.2 6.12c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg><span><small>Download on the</small><b>App Store</b></span></a>
+</div></nav>
+<header class="p-hero"><div class="p-hero-bg" style="background-image:url(img/art.jpg)"></div><div class="wrap p-grid">
+  <div>
+    <div class="crumbs"><a href="/">Alday Inc</a> / <a href="/alday-apps/">Games &amp; apps</a> / TowMargin</div>
+    <div class="p-id"><img src="img/icon.png" alt="TowMargin app icon"><div><span class="eyebrow">RV towing weight calculator</span><div class="genre" style="margin-top:6px">Towing Calculator - TowMargin</div></div></div>
+    <h1>TowMargin<br><span class="grad">Know your towing margin before you hitch up.</span></h1>
+    <p class="lede">A towing weight calculator for RV, travel trailer, fifth wheel and utility trailer owners. Enter the ratings on your truck and trailer and see every limit side by side with your margin in pounds.</p>
+    <div class="actions"><a class="btn btn-store" href="https://apps.apple.com/app/id6833473043" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.65.8-3.34.8-.7 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.74 2.2 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.7.71 2.86.69 1.18-.02 1.93-1.08 2.66-2.14.84-1.22 1.18-2.41 1.2-2.47-.03-.01-2.3-.88-2.3-3.55zM14.2 6.12c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg><span><small>Download on the</small><b>App Store</b></span></a><a class="btn btn-ghost" href="support.html">Support</a></div>
+  </div>
+  <div class="p-art reveal"><img src="img/art.jpg" alt="TowMargin key art"></div>
 </div>
-<h2>What it checks</h2>
-<ul>
-<li>Payload, including tongue or pin weight</li>
-<li>Maximum trailer (towing capacity) and trailer GVWR</li>
-<li>Combined weight against GCWR</li>
-<li>Hitch ratings for trailer weight and tongue or pin weight</li>
-<li>Tongue or pin weight as a share of trailer weight</li>
-</ul>
-<h2>Free and Pro</h2>
-<div class="card">
-<p><strong>Free:</strong> the complete weight check for one rig (one tow vehicle, one trailer and its load) with every check and margin shown. No ads.</p>
-<p><strong>TowMargin Pro:</strong> a one-time purchase, not a subscription. Adds unlimited saved rigs, itemized cargo lists for vehicle and trailer, and a PDF weight report you can export or share.</p>
-</div>
-<h2>Private by design</h2>
-<p>No account, no analytics, no ads, no third-party SDKs. Everything you enter stays on your iPhone. See the <a href="privacy.html">privacy policy</a>.</p>
-<div class="note">
-<p><strong>Estimates only.</strong> TowMargin calculates from the numbers you enter. It does not weigh anything and does not state that any setup is safe to tow. Confirm your ratings on the manufacturer's door-jamb stickers, trailer VIN label and owner's manuals, and weigh your loaded rig on a certified scale such as a CAT Scale.</p>
-</div>
-<p class="muted">For iPhone, iOS 17 or later. US units (pounds). Made by Alday Inc.</p>
-</main>
-<footer>&copy; 2026 Alday Inc. TowMargin is a planning aid. Results are estimates; confirm with manufacturer labels and a certified scale.</footer>
+<div class="wrap"><div class="facts reveal">
+  <div class="fact"><span>Price</span><b>Free, with an optional one-time Pro purchase</b></div>
+  <div class="fact"><span>Devices</span><b>iPhone · iPad · iPhone Duo</b></div>
+  <div class="fact"><span>Languages</span><b>10, incl. English &amp; Bahasa Indonesia</b></div>
+  <div class="fact"><span>Offline</span><b>Yes</b></div>
+  <div class="fact"><span>Made by</span><b>Alday Inc</b></div>
+</div></div></header>
+<section style="padding:40px 0 20px"><div class="wrap"><div class="head reveal" style="margin-bottom:28px"><div><span class="eyebrow">Screenshots</span><h2>See it in play</h2></div></div></div><div class="shots reveal"><img src="img/shot1.jpg" alt="TowMargin screenshot 1" loading="lazy"><img src="img/shot2.jpg" alt="TowMargin screenshot 2" loading="lazy"><img src="img/shot3.jpg" alt="TowMargin screenshot 3" loading="lazy"><img src="img/shot4.jpg" alt="TowMargin screenshot 4" loading="lazy"><img src="img/shot5.jpg" alt="TowMargin screenshot 5" loading="lazy"><img src="img/shot6.jpg" alt="TowMargin screenshot 6" loading="lazy"></div></section>
+<section><div class="wrap"><div class="head reveal"><div><span class="eyebrow">Features</span><h2>What you can do</h2></div></div><div class="feat"><div class="pillar reveal"><div class="n">01</div><h3>What it checks</h3><ul><li>Payload, towing capacity and trailer GVWR</li><li>GCWR and hitch tongue or pin weight</li><li>Tongue weight percent against the recommended range</li></ul></div><div class="pillar reveal"><div class="n">02</div><h3>Clear answers</h3><ul><li>Within ratings, Near limit or Over rating</li><li>Margin left in pounds for every check</li><li>A realistic maximum trailer for your setup</li></ul></div></div></div></section>
+<section id="about" class="pillars"><div class="wrap"><div class="prose reveal"><span class="eyebrow">About the app</span><h2>About TowMargin</h2><p>TowMargin is a towing weight calculator for iPhone and iPad by Alday Inc. It compares your estimated weights with every rating printed on your truck, trailer and hitch, and shows which limit you reach first, which for many half-ton trucks is payload, not towing capacity.</p><p class="genre">Related: towing calculator, payload calculator, tongue weight calculator, GCWR calculator, fifth wheel weight, travel trailer towing, RV towing capacity, truck payload.</p></div></div></section>
+<section><div class="wrap"><div class="head reveal"><div><span class="eyebrow">FAQ</span><h2>Questions</h2></div></div><div class="faq reveal"><details><summary>Is TowMargin free?</summary><p>Yes, the full set of checks is free. A one-time Pro purchase adds extras.</p></details><details><summary>Does it use my location or an account?</summary><p>No. TowMargin has no account and keeps your numbers on your device.</p></details></div></div></section>
+<section class="cta"><div class="wrap reveal"><span class="eyebrow">Available now</span><h2>Know your towing margin before you hitch up.</h2><p>Towing Calculator - TowMargin for iPhone, iPad, iPhone Duo.</p><div class="actions"><a class="btn btn-store" href="https://apps.apple.com/app/id6833473043" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.65.8-3.34.8-.7 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.74 2.2 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.7.71 2.86.69 1.18-.02 1.93-1.08 2.66-2.14.84-1.22 1.18-2.41 1.2-2.47-.03-.01-2.3-.88-2.3-3.55zM14.2 6.12c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg><span><small>Download on the</small><b>App Store</b></span></a><a class="btn btn-ghost" href="privacy.html">Privacy policy</a></div></div></section>
+<footer class="site"><div class="wrap">
+  <div class="foot">
+    <div><a href="/" class="logo" style="margin-bottom:14px"><span class="logo-mark">A</span>Alday Inc</a><p style="max-width:300px">An independent studio making games and apps for iPhone, iPhone Duo and iPad.</p></div>
+    <div><h4>Games</h4><ul><li><a href="/alday-apps/juragankos/">Juragan Kos</a></li><li><a href="/alday-apps/unfoldcafe/">Unfold Cafe</a></li><li><a href="/alday-apps/toastello/">Toastello</a></li></ul></div>
+    <div><h4>Apps</h4><ul><li><a href="/alday-apps/towmargin/">TowMargin</a></li><li><a href="/alday-apps/tillcount/">TillCount</a></li><li><a href="/alday-apps/cribcount/">CribCount</a></li><li><a href="/alday-apps/tapecount/">TapeCount</a></li></ul></div>
+    <div><h4>Studio</h4><ul><li><a href="/">Home</a></li><li><a href="/alday-apps/">All games &amp; apps</a></li><li><a href="/app-ads.txt">app-ads.txt</a></li></ul></div>
+  </div>
+  <div class="legal"><span>© 2026 Alday Inc. All rights reserved.</span><span>iPhone and iPad are trademarks of Apple Inc. App Store is a service mark of Apple Inc.</span></div>
+</div></footer>
+<script>
+const nav=document.getElementById('nav');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.reveal').forEach(e=>e.classList.add('in')),1200);
+</script>
 </body>
 </html>
